@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en"> 
+
+<head>
+    <meta charset="UTF-8"> <!--declares the page's character encoding-->
+    <meta name="author" content="Aritra Chatterjee">
+    <meta name="description" content="This is the page that contains all the information that i learned about how to create in html">
+    <title> My first web page </title>
+    <link rel="icon" href="html.png"  type="image/x-icon">
+    <link rel="stylesheet" href="main.css" type="text/css">
+    <!--Relative reference-->
+     <style>
+         
+     </style>
+</head>
+<body>
+     <header>
+<h1>My Goals for this year</h1>
+<nav aria-label="primary navigation"><!--if we have more than one nav in a single page, it helps the assisted technology or screen reader to understand which nav is which-->
+<ul>
+     <li><a href="#html"> Learning html</a></li>
+     <li><a href="#vacation"> Planning a vacation</a></li>
+     <li><a href="#contact"> Contact me</a></li>
+     </ul>
+</nav>
+</header>
+<main>
+     <article id="html"><!--An article element has it's own topic whereas section element is much more generic(has no specific purpose)-->
+     <h2> I am ready to learn HTML</h2>
+     <p>This is my first webpage.</p>
+      <section>
+          <h3>HTML5</h3>
+     <img src="html logo.webp" alt="HTML5 Logo" width="300" height="300" title="A HTML5 Logo">
+     <figure>
+     <figcaption>An example of HTML5 code
+          <p><code>&lt;h1&gt;Hello world!&lt;/h1&gt;</code></p>
+     </figcaption>
+     </figure>
+</section><!--section element doesn't change the look the web page but definitely changes how the browser interprets and benefits the assisted technology-->
+
+     <h2>My daily schedule</h2>
+     <p>Let me tell you how:</p>
+     <ol>
+     <li>...I learn more about web dev.</li>
+     <li>...I plan out my schedule.</li>
+     <li>...I use resources from <abbr title="Mozilla Devloper network"><a href="https://developer.mozilla.org/">MDN</a></abbr>.</li>
+     <!--Absolute reference-->
+     </ol>
+     <aside><!--complimentary text, not as important as other contents in the article-->
+          <details><!--provide details of stuffs-->
+               <summary>Guess <mark>the number of hours</mark> i code per day</summary><!--you can use this as a quiz by having a question and a answer-->
+               <p>I start at the morning at <time datetime="08:00"> 8 am</time> and code for <time datetime="PT3H"> 3 hours</time> every morning</p><!--time element doesn't provide any changes in the web page but can be extremely helpful for the assisted technology or the browsers-->
+          </details>
+     </aside>
+     <br>
+     <table>
+          <caption>My daily schedule</caption>
+          <thead>
+           <tr>
+          <th>&nbsp;</th>
+           <th scope="col">Time</th>
+          <th scope="col">Activity</th>
+          </tr>
+     </thead>
+     <tbody>
+          <th scope="row">Morning</th>
+           <td>
+          <time datetime="8:00">8am</time>-<time></time datetime="11:00">11am</time>
+          </td>
+          <td>Write code</td>
+          </tr>
+          <tr>
+              <th scope="row"> Break</th>
+               <td>
+                  <time datetime="11:00">11am</time>-<time></time datetime="12:00">12pm</time>
+               </td>
+               <td>Eat lunch</td>
+          </tr>
+          <tr>
+               <th scope="row">Afternoon</th>
+               <td>
+                <time datetime="12:00">12pm</time>-<time></time datetime="17:00">5pm</time>
+               </td>
+               <td>Study for other courses</td>
+          </tr>
+          <tr>
+               <th scope="row">Evening</th>
+               <td rowspan="2">All other times</td>
+               <td>Freetime</td>
+          </tr>
+          <tr>
+               <th scope="row">Night</th>
+               <td>Sleep</td>
+          </tr>
+     </tbody>
+     <tfoot>
+          <tr>
+               <td colspan="3">And that's what i do everyday, 5 days a week, eat, sleep, code and repeat</td>
+          </tr>
+     </tfoot>
+
+     </table>
+     </article>
+      <hr>
+      
+     <article id="Vacation">
+     <h2>I am also planning a vacation</h2>
+     <p>I have been working hard and <em>really need a getaway</em></p>
+     <p>I live in <abbr title="Kansas">KS</abbr> so I want to visit a beach</p>
+<section>
+     <h3>Places i'd like to visit</h3>
+     <ul>
+     <li><p>I have heard good things about the Caribbean</p></li>
+     <figure>
+     <img src="caribbean.jpg" alt="Caribbean beach" width="400" height="300" loading="lazy" title="A caribbean beach"><!--Loading by default is set to "Eager"-->
+     <figcaption>This is a caribbean beach</figcaption>
+</figure>
+     <li><p>I have heard good things about going here:</p>
+     <address>Cecilia Chapman<br>
+          711-2880 Nulla St.<br>
+          Mankato Mississippi 96522</address></li>
+          </ul>
+          <figure>
+          <img src="vacation.webp" alt="This is where i'm going for vacation"
+          width="400" height="300" title="Vacation place">
+          <figcaption>This is where i'm going for vacation</figcaption>
+     </figure>
+</section>
+          <!--TODO: Add more places-->
+          <section>
+     <h3>Places i'd like to avoid</h3>
+     <dl>
+          <dt>North pole</dt>
+          <dd>This place is <strong>cold!</strong>
+          <dt>South pole</dt>
+          <dd>This place is cold as well!</dd>
+          <dt>Mountain tops</dt>
+          <dd>These are very cold!</dd>
+     </dl>
+</section>
+     </article>
+     
+     <fieldset>
+          <legend>Personal information</legend>
+     <article id="Contact">
+          <h2>Contact me</h2>
+          <p>I'd really like to hear from you</p>
+          <form action="https://httpbin.org/get" method="get">
+          <p>
+          <label for="firstname">Firstname:</label><!--for and id should match with each other-->
+          <input type="text" name="firstname" id="firstname" placeholder="Aritra" autocomplete="on" required ><!--we can also add autofocus to focus at a particular part of the page-->
+     </p>
+     <p>
+          <label for="lastname">Lastname:</label>
+          <input type="text" name="lastname" id="firstname" placeholder="Chatterjee" autocomplete="on" required >
+     </p>
+     <p>
+          <label for="password">Password:</label>
+          <input type="password" name="password" id="password" placeholder="Your secret" required >
+     </p>
+     <p>
+          <label for="phonenumber">Phonenumber:</label>
+          <input type="tel" name="phonenumber" id="phonenumber" placeholder="5555555555" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" required >
+     </p>
+     <p>
+          <label for="decade">Favorite Decade:</label>
+          <input type="number" name="decade" id="decade" min="1950" max="2020" step="10" value="1980">
+     </p>
+     <p>
+          <label for="coffee">Favorite coffee</label>
+     <select name="coffee" id="coffee" multiple size="5">
+         <optgroup label="Coffees">
+          <option value="Regular coffee">Regular coffee</option>
+          <option value="iced coffee">Iced coffee</option>
+     </optgroup>
+     <optgroup label="Espresso drinks">
+          <option value="Latte">Lattee</option>
+          <option value="cappucinno">Cappucinno</option>
+          <option value="Americano" selected>Americano</option>
+     </optgroup>
+          <option value="Others">Others</option>
+     </select>
+     </p> 
+</fieldset>
+<hr>
+<fieldset>
+     <legend>What is your favorite food?</legend>
+     <p>
+     <input type="radio" name="food" id="Pizza" value="Pizza">
+     <label for="Pizza">Pizza</label>
+</p>
+<p>
+     <input type="radio" name="food" id="Biriyani" value="Biriyani">
+     <label for="Biriyani">Biriyani</label>
+</p>
+<p>
+     <input type="radio" name="food" id="Burger">
+     <label for="Burger">Burger</label>
+</p>
+<input type="radio" name="food" id="Other">
+     <label for="Other">Other</label>
+<p>
+
+</p>
+
+</fieldset>
+<fieldset>
+     <legend>Do you have pets?</legend>
+     <p>
+     <input type="checkbox" name="pets" id="cats">
+     <label for="cats">Cats</label>
+</p>
+<p>
+     <input type="checkbox" name="pets" id="dogs">
+     <label for="dogs">Dogs</label>
+</p>
+<p>
+     <input type="checkbox" name="pets" id="fishes">
+     <label for="fishes">Fishes</label>
+</p>
+<input type="checkbox" name="pets" id="Other">
+     <label for="Other">Other</label>
+<p>
+
+</p>
+</fieldset>
+<br>
+<fieldset>
+     <legend>Send me a note</legend>
+     <label for="message">Your message:</label>
+     <br>
+     <textarea name="message" id="message" cols="30" rows="10" placeholder="Type your message here"></textarea>
+</fieldset>
+<br>
+<button type="submit">Submit</button>
+<button type="post" formaction="https://httpbin.org/post" formmethod="post">Post</button>
+<button type="reset">Reset</button>
+</form>
+<!-- <p>
+     <label for="coffee">Favorite coffee</label>
+     <input type="text" name="coffee" id="coffee" list="coffee-list">
+     <datalist id="coffee-list">
+          <option value="Regular coffee">Regular coffee</option>
+          <option value="Iced coffee">Iced coffee</option>
+          <option value="Espresso">Espresso</option>
+          <option value="Latte">Latte</option>
+          <option value="Americano">Americano</option>
+          <option value="Other">Other</option>
+     </datalist>
+</p>
+ -->
+</article>
+</main>
+<hr>
+<footer>
+<p>
+&lt;&lt;&lt;&copy;<a href="about.html">Aritra Chatterjee</a> &gt;&gt;&gt;
+</p>
+<P><a href="#">Back to Top</a></P>
+</footer>
+</body>
+</html>
+<!--div= acronym for divider, has no semantic meaning, it's similar to section element but without a semantic meaning and it's a block element-->
+<!--span= It's an inline element, has no semantic meaning, used in css styling for words-->
+
